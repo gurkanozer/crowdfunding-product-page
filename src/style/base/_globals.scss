@@ -1,0 +1,114 @@
+
+html { font-size: 62.5%; } 
+body { 
+    font-size: 1.6rem; 
+    font-family: $font-primary;
+    font-weight: 400;
+    background-color: $color-light-gray;
+    color:$color-gray-dark;
+}
+
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+main{
+    max-width:78rem;
+    margin: 0 auto;
+}
+p{
+    font-size:1.4rem;
+    line-height: 2.4rem;
+    @media screen and(min-width:$md-screen){
+        font-size:1.6rem;
+    }
+}
+span{
+    font-size:1.4rem;
+}
+h1,h2,h3,h4{
+    font-weight: 700;
+    font-family: $font-primary;
+    color:$color-black;
+}
+h1{
+    font-size:2rem;
+    @media screen and(min-width:$md-screen){
+        font-size:2.8rem;
+    }
+}
+h2{
+    font-size:1.8rem;
+}
+h3{
+    font-size:1.4rem;
+    @media screen and(min-width:$md-screen){
+        font-size: 1.6rem;
+    }
+}
+.number{
+    font-size:3.2rem;// 4.4rem
+    font-weight: 700;
+    line-height: 4.4rem;
+    color:$color-black;
+}
+.color{
+    &--cyan{
+        color:$color-cyan;
+    }
+    &--black{
+        color:$color-black;
+    }
+    &--gray{
+        color:$color-gray;
+    }
+}
+
+.btn{
+    padding:1.8rem 3.2rem;
+    background-color: $color-cyan;
+    color:#fff;
+    border-radius: 2.4rem;
+    &:hover{
+        background-color: $color-cyan-dark;
+    }
+}
+.overlay{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
+    display: none;
+    &.active{
+        display:block;
+    }
+    
+    &--active{
+        overflow-y: hidden;
+        height:100vh;
+    }
+}
