@@ -1,4 +1,4 @@
-export const run = (navbarService, modalService, rewardService) => {
+export const run = (navbarService, modalService, rewardService, bookmarkService) => {
   //Toggle Navbar
   listenEvent("click", navbarService.toggleBtn, () => {
     navbarService.toggle();
@@ -51,6 +51,10 @@ export const run = (navbarService, modalService, rewardService) => {
     listenEvent("click",element,()=>{
       rewardService.setActiveReward(element);
     })
+  })
+  //Bookmark Action
+  listenEvent("click",bookmarkService.toggleBtn,()=>{
+    bookmarkService.toggleBookmark();
   })
 };
 

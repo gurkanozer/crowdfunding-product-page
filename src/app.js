@@ -3,6 +3,7 @@ import { run } from "./js/run";
 import NavbarService from "./js/nabar.services";
 import ModalService from "./js/modal.services";
 import RewardService from "./js/reward.services";
+import BookmarkService from "./js/bookmark.services";
 
 //ELEMENTS
 const navbar = document.querySelector(".navbar");
@@ -27,4 +28,5 @@ const modalService = new ModalService(
   cards
 );
 const rewardService = new RewardService(cards, forms, cardRadioBtns);
-run(navbarService, modalService, rewardService);
+const bookmarkService = new BookmarkService(bookmarkBtn);
+run(navbarService, modalService, rewardService,bookmarkService);
