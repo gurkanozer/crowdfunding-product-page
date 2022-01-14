@@ -599,9 +599,9 @@ header .header__toggle-btn.active {
   height: 100%;
   position: fixed;
   overflow-y: auto;
-  z-index: 100;
   padding: 0 2.4rem 4rem;
   opacity: 0;
+  z-index: 100;
 }
 
 .modal.active {
@@ -616,9 +616,40 @@ header .header__toggle-btn.active {
   top: 12rem;
 }
 
-.modal__container {
-  margin-top: 12rem;
+.modal--rewards {
+  display: none;
   max-width: 78rem;
+}
+
+.modal--rewards.active {
+  display: block;
+}
+
+.modal--success {
+  display: none;
+  max-width: 54.2rem;
+}
+
+.modal--success .modal__header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal--success .modal__header > * {
+  margin-bottom: 2.4rem;
+}
+
+.modal--success .modal__header p {
+  text-align: center;
+}
+
+.modal--success.active {
+  display: block;
+}
+
+.modal__container {
+  margin: 12rem auto 0;
   background-color: #fff;
   padding: 2.4rem 2rem;
   border-radius: 1rem;
@@ -626,7 +657,7 @@ header .header__toggle-btn.active {
   position: relative;
 }
 
-.modal__close {
+.modal--close {
   position: absolute;
   top: 2.4rem;
   right: 2rem;
@@ -638,9 +669,26 @@ header .header__toggle-btn.active {
   height: 2.4rem;
 }
 
+.modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .modal__header h1 {
   font-size: 1.8rem;
   margin-bottom: 2.4rem;
+}
+
+.modal__success-img {
+  width: 6.4rem;
 }
 
 .modal__body {
@@ -665,27 +713,17 @@ header .header__toggle-btn.active {
 
 .card.disabled {
   cursor: not-allowed;
+  position: relative;
 }
 
-.card.disabled .card__title h2 {
-  color: #7a7a7a;
-}
-
-.card.disabled .card__title span {
-  opacity: 0.4;
-}
-
-.card.disabled .card__item-left span {
-  opacity: 0.4;
-}
-
-.card.disabled .card__item-left .bold {
-  color: #7a7a7a;
-  opacity: 1;
-}
-
-.card.disabled .card__text {
-  opacity: 0.4;
+.card.disabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .card.disabled .card__footer {
@@ -727,7 +765,7 @@ header .header__toggle-btn.active {
   cursor: pointer;
 }
 
-.card__radio-btn:checked ~ .card__radio-checkmark:after {
+.card__radio-btn.active ~ .card__radio-checkmark:after {
   display: block;
 }
 
@@ -871,6 +909,12 @@ header .header__toggle-btn.active {
   }
   .modal__header h1 {
     font-size: 2.4rem;
+  }
+  .modal--success {
+    max-width: 54.4rem;
+  }
+  .modal__success-img {
+    width: 9rem;
   }
   .card__body {
         grid-template-areas: "radio title title left" "radio text text text";
