@@ -6,10 +6,12 @@ class RewardService{
     }
     getReward(e){
         let data = new FormData(e);
-        let min = e.dataset.min;
+        let input = e.querySelector("input[name='pledge']");
+        let min = input.dataset.min
         if(Number(min) > data.get("pledge")){
             //Warning!
             //do something...
+            input.value = min;        
             return false;
         }
         else{

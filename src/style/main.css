@@ -80,13 +80,19 @@ h2 {
   font-size: 1.8rem;
 }
 
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
 h3 {
   font-size: 1.4rem;
 }
 
 @media screen and (min-width: 768px) {
   h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -315,7 +321,7 @@ header .header__toggle-btn.active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 4rem;
+  padding-bottom: 4.8rem;
 }
 
 .bookmark__btn-bookmark {
@@ -442,7 +448,7 @@ header .header__toggle-btn.active {
 
 .statistics__stat-item:not(:last-child)::after {
   content: '';
-  width: 8rem;
+  width: 6.2rem;
   height: 0.1rem;
   background-color: #DBDBDB;
   position: absolute;
@@ -489,7 +495,7 @@ header .header__toggle-btn.active {
   }
   .statistics__stat-item:not(:last-child)::after {
     content: '';
-    height: 8rem;
+    height: 6.2rem;
     width: 0.1rem;
     background-color: #DBDBDB;
     position: absolute;
@@ -500,7 +506,7 @@ header .header__toggle-btn.active {
             transform: translateX(0);
   }
   .statistics__progress {
-    margin-top: 4rem;
+    margin-top: 3.6rem;
   }
 }
 
@@ -519,7 +525,7 @@ header .header__toggle-btn.active {
 
 .about__text h2,
 .about__text p {
-  margin-bottom: 2.8rem;
+  margin-bottom: 3.2rem;
 }
 
 .about__card-footer p {
@@ -591,6 +597,9 @@ header .header__toggle-btn.active {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .about__item-left {
+    font-size: 2.8rem;
   }
 }
 

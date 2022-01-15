@@ -21,6 +21,7 @@ export const run = (navbarService, modalService, rewardService, bookmarkService)
       e.preventDefault();
       let res = rewardService.getReward(element);
       if(res){
+        console.log(res)
         modalService.openSuccess();
       }
       else{

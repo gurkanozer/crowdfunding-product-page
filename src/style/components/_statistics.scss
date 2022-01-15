@@ -26,7 +26,7 @@
         }
         &:not(:last-child)::after{
             content: '';
-            width:8rem;
+            width:6.2rem;
             height:0.1rem;
             background-color: $color-gray;
             position: absolute;
@@ -68,7 +68,7 @@
             padding:0;
             &:not(:last-child)::after{
                 content: '';
-                height:8rem;
+                height:6.2rem;
                 width:0.1rem;
                 background-color: $color-gray;
                 position: absolute;
@@ -79,7 +79,7 @@
             }
         }
         &__progress{
-            margin-top: 4rem;
+            margin-top: 3.6rem;
         }
     }
 }

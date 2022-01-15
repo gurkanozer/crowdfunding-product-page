@@ -60,11 +60,14 @@ h1{
 }
 h2{
     font-size:1.8rem;
+    @media screen and(min-width:$md-screen){
+        font-size:2rem;
+    }
 }
 h3{
     font-size:1.4rem;
     @media screen and(min-width:$md-screen){
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 }
 .number{
